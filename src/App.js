@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
-function App() {
+import Sidebar from "./components/Sidebar";
+import Chat from "./components/Chat";
+import Login from "./components/Login";
+
+import "./App.css";
+
+const App = () => {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {!user ? (
+        <Login />
+      ) : (
+        <div className="app__body">
+          <Router>
+            <Sidebar />
+            <Switch>
+              <Route path="/chats/:chatId">
+                <Chat />
+              </Route>
+              <Route path="/" />
+            </Switch>
+          </Router>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default App;
