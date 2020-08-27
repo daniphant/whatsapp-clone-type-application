@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Avatar, IconButton } from "@material-ui/core";
+import { Avatar, IconButton, Input } from "@material-ui/core";
 import { useParams } from "react-router-dom";
 import firebase from "firebase";
 
@@ -102,15 +102,15 @@ const Chat = () => {
         <IconButton>
           <AddCircleIcon />
         </IconButton>
-        <form>
-          <input
+        <form style={{flex: 1}}>
+          <Input
             type="text"
             value={input}
             onChange={val => {
               updateVal(val.target.value);
             }}
             placeholder="Type a message"
-            style={{ width: "100%" }}
+            style={{ width: "100%", flex: 1 }}
           />
           <button
             type="submit"
