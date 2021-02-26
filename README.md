@@ -10,9 +10,9 @@ Though it may not function anymore depending on issues regarding the connection 
 
 ### Screenshots
 
-[Login Screen with Google Auth]{https://raw.githubusercontent.com/daniphant/whatsapp-clone-type-application/master/public/login_screenshot.png}
+[Login Screen with Google Auth](https://raw.githubusercontent.com/daniphant/whatsapp-clone-type-application/master/public/login_screenshot.png)
 
-[Application Screen]{https://raw.githubusercontent.com/daniphant/whatsapp-clone-type-application/master/public/main_screenshot.png}
+[Application Screen](https://raw.githubusercontent.com/daniphant/whatsapp-clone-type-application/master/public/main_screenshot.png)
 
 ## Available Scripts
 
